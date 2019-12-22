@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/register/userlogin",
+    "pages/register/register",
+    "pages/my/myinfo",
+    "pages/tuisong/tuisong",
+    "pages/my/change",
+    "pages/search/search",
+    "wxSearchView/wxSearchView",
+    "pages/searchResult/searchResult"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "谣言识别",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/soushuo.png"
+      },
+      {
+        "pagePath": "pages/tuisong/tuisong",
+        "text": "谣言推送",
+        "iconPath": "images/tuisong.png",
+        "selectedIconPath": "images/tuisong2.png"
+      },
+      {
+        "pagePath": "pages/my/myinfo",
+        "text": "我的",
+        "iconPath": "images/wode.png",
+        "selectedIconPath": "images/wodedangxuan.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

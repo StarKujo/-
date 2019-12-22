@@ -1,0 +1,22 @@
+<swiper autoplay="true" indicator-dots="true">
+  <swiper-item>
+    <image src="../../images/yaoyan1.jpg" style="width:320px;height:150px;"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/yaoyan2.jpg" style="width:320px;height:150px;"></image>
+  </swiper-item>
+   <swiper-item>
+    <image src="../../images/yaoyan3.jpeg" style="width:320px;height:140px;"></image>
+  </swiper-item>
+</swiper>
+
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input"  disabled='true' placeholder="搜索入口" bindtap="wxSearchTab"/>
+    </view>
+  </view>
+</view>
+
+<view>{{ searchValue}}</view>

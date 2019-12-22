@@ -1,0 +1,10 @@
+/* pages/tuisong/tuisong.wxss */
+page{background-color:#EDEDED;}
+.button{
+  margin-top:10%; 
+  width: 100%;
+  background-color: rgb(65,149,255);
+  border-radius: 100px;
+  color: #FFF;
+  font-size: 15px;
+}

@@ -1,0 +1,5 @@
+<!--pages/tuisong/tuisong.wxml-->
+<view>暂时没有推送</view>
+<view >
+  <button bindtap="bindTap"class="button">去“谣言识别”看看</button>
+</view>
