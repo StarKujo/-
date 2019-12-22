@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import logging
 import json
+import os
 
 class S(BaseHTTPRequestHandler):
     def do_HEAD(self):
@@ -29,8 +30,9 @@ class S(BaseHTTPRequestHandler):
 
         logging.info("POST request,\nPath: %s\nHeaders:\n%s\n\nBody:\n%s\n",
                 str(self.path), str(self.headers), post_data.decode('utf-8'))
+        os.system("python3 /home/ubuntu/wechat01/get.py")
 
-        res = json.dumps(open('smh.txt').read().splitlines()) + post_data.decode('utf-8')
+        res = json.dumps(open('/home/ubuntu/wechat01/smh.txt').read().splitlines()) + post_data.decode('utf-8')
 
         self.do_HEAD()
         # self.wfile.write("POST request for {}".format(self.path).encode('utf-8'))
@@ -55,7 +57,7 @@ class S(BaseHTTPRequestHandler):
 def run(server_class=HTTPServer, handler_class=S, port=8080):
     print("run()")
     logging.basicConfig(level=logging.INFO)
-    server_address = ('172.20.10.3', port)
+    server_address = ('172.17.0.5', port)
     httpd = server_class(server_address, handler_class)
     logging.info('Starting httpd...\n')
     try:
@@ -69,6 +71,7 @@ def run(server_class=HTTPServer, handler_class=S, port=8080):
 
 if __name__ == '__main__':
     from sys import argv
+
 
     if len(argv) == 2:
         run(port=int(argv[1]))

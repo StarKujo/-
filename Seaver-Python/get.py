@@ -45,7 +45,7 @@ def parse_one_page(html):
 
 
 def write_to_file(content):
-    with open('smh.txt', 'a', encoding='utf-8') as f:
+    with open('/home/ubuntu/wechat01/smh.txt', 'a', encoding='utf-8') as f:
         f.write(json.dumps(content, ensure_ascii=False) + '\n')
 
 
@@ -58,7 +58,7 @@ def main(offset):
 
 
 if __name__ == '__main__':
-    open('smh.txt', 'w', encoding='utf-8')
+    open('/home/ubuntu/wechat01/smh.txt', 'w', encoding='utf-8')
     for i in range(1):
         main(offset=i * 10)
         time.sleep(1)
