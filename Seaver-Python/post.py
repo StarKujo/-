@@ -48,7 +48,7 @@ class S(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
         content='<html><head><title>Title goes here.</title></head><body><p>'
-        content+=open('smh.txt').read().splitlines()
+        content+='hello'
         content+='</p></body></html>'
         content.format(path)
         return bytes(content, 'UTF-8')
